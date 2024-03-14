@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 1% 0;
+    padding: 0;
+}
+#canvas {
+    display: flex;
+    align-self: center;
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    padding: 0;
+}
+
+
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    min-width: 20%;
+}
+
+button {
+    height: 40px;
+    width: 150px;
+}
+
+.box.active {
+    background-color: black;
+}
