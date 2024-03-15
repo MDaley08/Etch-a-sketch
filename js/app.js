@@ -2,16 +2,23 @@ const canvas  = document.getElementById('canvas');
 const gridInput = document.getElementById('grid-size');
 const gridBtn = document.getElementById('grid-btn')
 const clearBtn = document.getElementById('clear');
-const boxArr = [];
-const filledBoxArr = [];
+let boxArr = [];
+let filledBoxArr = [];
 
 const editGridSize = () => {
     let inputVal = gridInput.value;
     gridInput.value = '';
+    gridBtn.addEventListener('click', () => {
+        boxArr.forEach(element => element.remove())
+        createGrid(gridInput.value);
+    });
 }
 const clearGrid = () => {
     clearBtn.addEventListener('click', () => {
-        filledBoxArr.forEach(element => element.style.backgroundColor = 'white')
+        filledBoxArr.forEach(element => {
+            element.style.backgroundColor = 'white'
+            filledBoxArr = [];
+        });
     });
 };
 const createGrid = (gridSize) => {
