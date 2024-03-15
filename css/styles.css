@@ -28,6 +28,11 @@ h1 {
     min-width: 20%;
 }
 
+#grid-btn {
+    height: 25px;
+    width: 80px;
+    font-size: 12px;
+}
 button {
     height: 40px;
     width: 150px;
