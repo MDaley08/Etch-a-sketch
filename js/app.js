@@ -8,18 +8,19 @@ let filledBoxArr = [];
 const editGridSize = () => {
     let inputVal = gridInput.value;
     gridInput.value = '';
-    gridBtn.addEventListener('click', () => {
-        boxArr.forEach(element => element.remove())
-        createGrid(gridInput.value);
-    });
+    if(inputVal < 1 || inputVal > 100){
+        alert('please enter a value between 1 and 100');
+        return;
+    }
+    boxArr.forEach(element => element.remove());
+    createGrid(inputVal);
 }
+
 const clearGrid = () => {
-    clearBtn.addEventListener('click', () => {
         filledBoxArr.forEach(element => {
             element.style.backgroundColor = 'white'
             filledBoxArr = [];
         });
-    });
 };
 const createGrid = (gridSize) => {
     const boxLen = (canvas.offsetHeight/gridSize) + 'px';
@@ -44,6 +45,7 @@ const createGrid = (gridSize) => {
         });
     });
 };
-clearGrid();
-editGridSize();
-createGrid(100);
+
+createGrid(16);
+clearBtn.addEventListener('click', clearGrid)
+gridBtn.addEventListener('click', editGridSize)

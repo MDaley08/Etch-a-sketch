@@ -9,7 +9,7 @@ body {
 h1 {
     text-align: center;
     font-size: 40px;
-    margin: 1% 0;
+    margin: 3% 0;
     padding: 0;
 }
 #canvas {
@@ -20,22 +20,26 @@ h1 {
 }
 
 
-#side-bar {
+#menu-bar {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    border: 2px solid black;
-    min-width: 20%;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 700;
 }
-
-#grid-btn {
+label {
+    margin-right: 5px;
+}
+button {
     height: 25px;
     width: 80px;
     font-size: 12px;
 }
-button {
-    height: 40px;
-    width: 150px;
+#grid-btn {
+    margin-left: 8px;
+    margin-right: 2px;
+
 }
 
 .box.active {
